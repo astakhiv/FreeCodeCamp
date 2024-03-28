@@ -72,8 +72,8 @@ var s = [23, 65, 98, 5];
 Array.prototype.myMap = function(callback){
   var newArray = [];
   // Only change code below this line
-  for (var elem of this) {
-    newArray.push(callback(elem));
+  for (let i = 0; i < this.length; i++) {
+    newArray.push(callback(this[i], i, this));
   }
   // Only change code above this line
   return newArray;
